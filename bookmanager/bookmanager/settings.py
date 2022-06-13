@@ -29,7 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+# 注册安装子应用
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # 注册的安装的方案1是book
+    # 'book',
+    # 方案2是
+    'book.apps.BookConfig',
 ]
 
 MIDDLEWARE = [
