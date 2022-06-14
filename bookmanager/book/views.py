@@ -12,4 +12,5 @@ from django.http import HttpRequest
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse('Hello dears friend')
+    content ={'name': '特别推荐'}
+    return render(request, 'books/index.html', context=content)

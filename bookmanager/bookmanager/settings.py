@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os.path
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-wo+6v^u0)g-n=ak%=-r0*rwn7&k_o&#brq4zel4g$+aku6s9d+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.177.133']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # 注册的安装的方案1是book
-    'book',
+    # 'book',
     # 方案2是
-    # 'book.apps.BookConfig',
+    'book.apps.BookConfig',
 ]
 
 MIDDLEWARE = [
@@ -59,7 +59,9 @@ ROOT_URLCONF = 'bookmanager.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # 告诉系统模板的目录
+        # 'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,8 +82,12 @@ WSGI_APPLICATION = 'bookmanager.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': 'localhost',
+        'PORT': 3306,
+        'USER': 'debian-sys-maint',
+        'PASSWORD': 'Rs4sHI3dzDQqHTjX',
+        'NAME': 'books_db',
     }
 }
 
@@ -123,6 +129,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#告诉系统，图片在哪里
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
