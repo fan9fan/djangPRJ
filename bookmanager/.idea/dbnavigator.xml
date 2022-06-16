@@ -28,24 +28,15 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="4e9ce6fe-4a99-4c90-9377-ebed89b1b666">
-      <console name="Connection" type="STANDARD" schema="main" session="Main" />
+    <connection id="bfdbe64e-e244-405c-a3a1-ee4dab511577">
+      <console name="djangoPrj" type="STANDARD" schema="mysql" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="4e9ce6fe-4a99-4c90-9377-ebed89b1b666" />
-  </component>
-  <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="4e9ce6fe-4a99-4c90-9377-ebed89b1b666" dataset="main.auth_user" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="4e9ce6fe-4a99-4c90-9377-ebed89b1b666" dataset="main.book_pepleinfo" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="4e9ce6fe-4a99-4c90-9377-ebed89b1b666" dataset="main.book_bookinfo" active-filter-id="">
-      <filter id="965997d2-a1fa-49d4-950d-4370f03208eb" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
-        <condition column="id" operator="=" value="" active="true" />
-      </filter>
-    </filter-actions>
+    <connection id="bfdbe64e-e244-405c-a3a1-ee4dab511577" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -76,26 +67,23 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="4e9ce6fe-4a99-4c90-9377-ebed89b1b666" active="true" signed="true">
+      <connection id="bfdbe64e-e244-405c-a3a1-ee4dab511577" active="true" signed="true">
         <database>
-          <name value="Connection" />
-          <description value="" />
-          <database-type value="SQLITE" />
+          <name value="ubuntu" />
+          <description value="database of ubuntu" />
+          <database-type value="MYSQL" />
           <config-type value="BASIC" />
-          <database-version value="3.3" />
+          <database-version value="8.0" />
           <driver-source value="BUILTIN" />
           <driver-library value="" />
           <driver value="" />
-          <url-type value="FILE" />
-          <host value="" />
-          <port value="" />
-          <database value="" />
-          <files>
-            <file path="$PROJECT_DIR$/db.sqlite3" schema="main" />
-          </files>
-          <type value="NONE" />
-          <user value="" />
-          <deprecated-pwd value="" />
+          <url-type value="DATABASE" />
+          <host value="localhost" />
+          <port value="3306" />
+          <database value="mysql" />
+          <type value="USER_PASSWORD" />
+          <user value="debian-sys-maint" />
+          <deprecated-pwd value="UnM0c0hJM2R6RFFxSFRqWA==" />
         </database>
         <properties>
           <auto-commit value="false" />
