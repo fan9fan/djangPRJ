@@ -36,7 +36,7 @@ class pepleInfo(models.Model):
         (1,'male'),
         (2,'female')
     )
-    name = models.CharField(max_length=20, unique=True, verbose_name='姓名')
+    name = models.CharField(max_length=20, unique=True)
     gender = models.SmallIntegerField(choices=GENDER_CHOICE, default=1)
     description = models.CharField(max_length=100, null=True)
     is_delete = models.BooleanField(default=False)
@@ -47,7 +47,7 @@ class pepleInfo(models.Model):
     # 修改表名
     class Meta:
         db_table = 'peopleinfo'
-        verbose_name = '读者'
+        # verbose_name = '读者'
 
         # 重写str方法，让admin显示书籍名字
     def __str__(self):
