@@ -1,0 +1,4 @@
+# 模板指定字段  object 表示要检索的模型实例 这里相当于 object = SKU()
+{{ object.title }}
+{{ object.user.get_full_name }}
+{{ object.body }}
